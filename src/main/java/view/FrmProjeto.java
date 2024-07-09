@@ -37,7 +37,7 @@ public class FrmProjeto extends javax.swing.JFrame {
 
     APOD apod = dal.API.chamar("2024-07-01", "2024-07-07");
     ArrayList<Objeto> lst = dal.LeitorJSON.Leitor(apod);
-    Timer otimer = new Timer();
+    Timer timer = new Timer();
 
     public FrmProjeto() throws ClassNotFoundException, SQLException{
         initComponents();
@@ -45,7 +45,7 @@ public class FrmProjeto extends javax.swing.JFrame {
         contObjProx.setText(apod.element_count);
         carregaGrafico();
         carregaTabelaProxAprox();
-        theTimer();
+        Timer();
     }
 
     /**
@@ -620,10 +620,10 @@ public class FrmProjeto extends javax.swing.JFrame {
        
     }
     
-    public void theTimer(){
+    public void Timer(){
         int delay = 0;
         int interval = 200;
-        otimer.scheduleAtFixedRate(new TimerTask(){
+        timer.scheduleAtFixedRate(new TimerTask(){
             public void run() {
                atualizaHora();
             }

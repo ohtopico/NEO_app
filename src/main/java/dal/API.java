@@ -22,7 +22,7 @@ import view.FrmProjeto;
 public class API {
     
         public static APOD chamar(String dataInicio, String dataFim){
-        String apiKey = "gIUp3iD5UgMZHfW4QlufvfZUlk4Sj1WlZwhEiSet";
+        String apiKey = ""; // trocar por sua chave
         String apiUrl = "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + dataInicio + "&end_date=" + dataFim + "&api_key=" + apiKey;
         // Create a neat value object to hold the URL
         URL url;
